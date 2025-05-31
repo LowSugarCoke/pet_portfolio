@@ -1,27 +1,107 @@
-# DockerDemo
+# 🚀 DockerDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version **18.1.3**.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔧 Development (Docker on Windows)
 
-## Code scaffolding
+### 🛠️ Build Docker Image
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Command Prompt / PowerShell**
 
-## Build
+```bash
+docker build -t docker-demo-dev .
+````
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### ▶️ Run Dev Server in Docker
 
-## Running unit tests
+**Command Prompt**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+docker run -it --rm -p 4200:4200 -v %cd%:/app -w /app docker-demo-dev
+```
 
-## Running end-to-end tests
+**PowerShell**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+docker run -it --rm -p 4200:4200 -v "${PWD}:/app" -w /app docker-demo-dev
+```
 
-## Further help
+🔗 Open [http://localhost:4200](http://localhost:4200) in your browser.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+> ✅ Live-reloads supported via volume mount. All dependencies handled inside Docker.
+
+
+
+## 🧪 Angular CLI Commands
+
+### 🔄 Run Dev Server (without Docker)
+
+```bash
+ng serve
+```
+
+Navigate to: [http://localhost:4200](http://localhost:4200)
+The app auto-reloads on file changes.
+
+---
+
+### 🧱 Generate Code
+
+```bash
+ng generate component component-name
+```
+
+Or use:
+
+* `directive`
+* `pipe`
+* `service`
+* `class`
+* `guard`
+* `interface`
+* `enum`
+* `module`
+
+---
+
+### 📦 Build
+
+```bash
+ng build
+```
+
+Build artifacts will be stored in the `dist/` directory.
+
+---
+
+### 🧪 Run Unit Tests
+
+```bash
+ng test
+```
+
+Executes tests using [Karma](https://karma-runner.github.io).
+
+---
+
+### 🧪 Run End-to-End (E2E) Tests
+
+```bash
+ng e2e
+```
+
+> ⚠️ Requires a package that supports end-to-end testing.
+
+---
+
+## 📚 More Help
+
+For full Angular CLI documentation:
+
+```bash
+ng help
+```
+
+Or visit the official [Angular CLI Reference](https://angular.dev/tools/cli).
+
