@@ -10,22 +10,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 **Command Prompt / PowerShell**
 
 ```bash
-docker build -t docker-demo-dev .
+docker compose up --watch
 ````
-
-### ▶️ Run Dev Server in Docker
-
-**Command Prompt**
-
-```
-docker run -it --rm -p 4200:4200 -v %cd%:/app -w /app docker-demo-dev
-```
-
-**PowerShell**
-
-```bash
-docker run -it --rm -p 4200:4200 -v "${PWD}:/app" -w /app docker-demo-dev
-```
 
 🔗 Open [http://localhost:4200](http://localhost:4200) in your browser.
 
