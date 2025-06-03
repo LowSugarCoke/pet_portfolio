@@ -1,0 +1,13 @@
+services:
+  angular-app:
+    build: .
+    ports:
+      - "4200:4200"
+    develop:
+      watch:
+        - path: .
+          target: /app
+          action: sync
+    working_dir: /app
+    tty: true
+    command: ["ng", "serve", "--host", "0.0.0.0"]
