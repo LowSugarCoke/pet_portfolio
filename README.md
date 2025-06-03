@@ -15,7 +15,7 @@ docker compose up --watch
 
 🔗 Open [http://localhost:4200](http://localhost:4200) in your browser.
 
-> ✅ Live-reloads supported via volume mount. All dependencies handled inside Docker.
+> ✅ Live-reloads supported via watch. All dependencies handled inside Docker.
 
 
 
